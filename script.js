@@ -48,19 +48,20 @@ let d_text = document.getElementById("d_text");
 let marks = 0;
 var questionTracker = 0;
 submit.addEventListener("click", () => {
-  var ele = document.querySelector('input[name="option"]:checked');
-  if (ele.id == obj[questionTracker].correct) {
-    marks++;
-  }
-  questionTracker++;
-
-  ele.checked = false;
-  if (obj.length > questionTracker) {
-    displayQuestion(questionTracker);
-  } else {
-    question.innerHTML = `You ansered ${marks}/4 questions correctly`;
-    let option_box = document.getElementById("option-box");
-    option_box.style.cssText = "display: none;";
+  var userAnswer = document.querySelector('input[name="option"]:checked');
+  if (userAnswer) {
+    if (userAnswer.id == obj[questionTracker].correct) {
+      marks++;
+    }
+    questionTracker++;
+    userAnswer.checked = false;
+    if (obj.length > questionTracker) {
+      displayQuestion(questionTracker);
+    } else {
+      question.innerHTML = `You ansered ${marks}/4 questions correctly`;
+      let option_box = document.getElementById("option-box");
+      option_box.style.cssText = "display: none;";
+    }
   }
 });
 
