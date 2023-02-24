@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="start">
+        <button id="startBtn">Start</button>
+    </div>
+    <div class="quiz-container" id="quiz">
+        <h2 id="question"></h2>
+        <div id="option-box">
+            <div class="input-filed">
+                <input type="radio" name="option" id="a">
+                <label for="" id="a_text"></label>
+            </div>
+            <div class="input-filed">
+                <input type="radio" name="option" id="b">
+                <label for="" id="b_text"></label>
+            </div>
+            <div class="input-filed">
+                <input type="radio" name="option" id="c">
+                <label for="" id="c_text"></label>
+            </div>
+            <div class="input-filed">
+                <input type="radio" name="option" id="d">
+                <label for="" id="d_text"></label>
+            </div>
+        </div>
+        <button id="submit">Submit</button>
 
+    </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
