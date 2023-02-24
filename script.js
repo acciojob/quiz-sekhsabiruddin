@@ -74,11 +74,10 @@ function displayQuestion(questionTracker) {
   d_text.innerHTML = obj[questionTracker].d;
 }
 
-let btn = document.getElementById("startBtn");
 let quz = document.getElementById("quiz");
-btn.addEventListener("click", () => {
+
+window.addEventListener("load", () => {
   quz.style.cssText = "display: block;";
-  btn.style.cssText = "display: none;";
 
   displayQuestion(questionTracker);
 });
